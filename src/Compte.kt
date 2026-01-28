@@ -2,7 +2,7 @@ open  class Compte(
     var code :String ,
     var solde :Int= 0) {
     open fun deposer (somme :Int){
-        if (somme == null    ){
+        if (somme <=0  ){
          println("Somme is null")
     }else{
             solde+=somme
@@ -14,6 +14,6 @@ open  class Compte(
     }
 
     override fun toString(): String {
-        return "le solde {solde} et lo code  "
+        return "Compte(code=$code, solde=$solde)"
     }
 }
